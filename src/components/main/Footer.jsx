@@ -1,24 +1,26 @@
 import { SocialIcon } from "react-social-icons";
 import "./Footer.less";
 
+const socialIconsInfo = [
+  { network: "instagram", url: "https://www.instagram.com/davincitaller" },
+  { network: "tiktok", url: "https://vm.tiktok.com/ZMRA3hNtL"  },
+  { network: "facebook", url: "https://www.facebook.com/Davincitaller.cba/"  },
+  { network: "whatsapp", url: "https://wa.me/5493512510898"  }
+];
+
 const Footer = () => {
   return (
     <div className="footer">
       <div className="social-media">
-        <SocialIcon
-          network="instagram"
-          fgColor="white"
-          url="https://www.instagram.com/davincitaller"
-          target="_blank"
-        />
-        <SocialIcon network="tiktok" fgColor="white" />
-        <SocialIcon
-          network="facebook"
-          fgColor="white"
-          url="https://www.facebook.com/Davincitaller.cba/"
-          target="_blank"
-        />
-        <SocialIcon network="whatsapp" fgColor="white" />
+        {socialIconsInfo.map(socialIconInfo => {
+          return <SocialIcon
+            key={socialIconInfo.url}
+            network={socialIconInfo.network}
+            fgColor="white"
+            url={socialIconInfo.url}
+            target="_blank"
+          />
+        })}
       </div>
       <div className="map-location">
         <iframe
