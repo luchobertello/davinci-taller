@@ -1,7 +1,9 @@
+@import "../../variables.less";
+
 @media screen and (min-width: 68rem) {
   .footer {
     height: 30rem;
-    background-color: rgb(255, 255, 255);
+    background-color: @white;
     background: linear-gradient(
       90deg,
       rgba(255, 255, 255, 1) 0%,
@@ -9,20 +11,20 @@
     );
     display: flex;
     justify-content: space-between;
-  
+
     .social-media {
       display: flex;
       flex-direction: column;
       justify-content: center;
       flex-basis: 10%;
       padding-left: 1.5rem;
-  
+
       > .social-icon {
         cursor: pointer;
         margin-bottom: 0.3rem;
       }
     }
-  
+
     .map-location {
       flex-basis: 50%;
       display: flex;
@@ -30,13 +32,13 @@
       justify-content: center;
       align-items: center;
     }
-  
+
     .contact-info {
       flex-basis: 20%;
       display: flex;
       flex-direction: column;
       justify-content: center;
-  
+
       p {
         margin-bottom: 0.5rem;
         font-weight: bold;
@@ -47,7 +49,7 @@
 
 @media screen and (max-width: 68rem) {
   .box {
-    background-color: rgb(255, 255, 255);
+    background-color: @white;
     background: linear-gradient(
       90deg,
       rgba(255, 255, 255, 1) 0%,
@@ -57,23 +59,23 @@
   }
 
   .footer {
-    background-color: rgb(255, 255, 255);
+    background-color: @white;
     background: linear-gradient(
       90deg,
       rgba(255, 255, 255, 1) 0%,
       rgba(43, 98, 204, 1) 64%
     );
-  
+
     .social-media {
       text-align: center;
       padding-bottom: 2rem;
-  
+
       > .social-icon {
         cursor: pointer;
         margin-right: 0.3rem;
       }
     }
-  
+
     .map-location {
       text-align: center;
 
@@ -81,13 +83,13 @@
         width: 95%;
       }
     }
-  
+
     .contact-info {
       align-items: center;
       display: flex;
       flex-direction: column;
       justify-content: center;
-  
+
       p {
         margin-bottom: 0.5rem;
         font-weight: bold;
