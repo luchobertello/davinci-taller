@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { Affix } from "antd";
 import { SocialIcon } from "react-social-icons";
 import {
   ALT_MAP,
@@ -19,14 +21,12 @@ const socialIconsInfo = [
   {
     network: SOCIAL_NETWORKS.FACEBOOK,
     url: SOCIAL_NETWORKS_URL[SOCIAL_NETWORKS.FACEBOOK]
-  },
-  {
-    network: SOCIAL_NETWORKS.WHATSAPP,
-    url: SOCIAL_NETWORKS_URL[SOCIAL_NETWORKS.WHATSAPP]
   }
 ];
 
 const Footer = () => {
+  const [isAffixed, setIsAffixed] = useState();
+
   return (
     <div className="footer">
       <div className="social-media">
@@ -41,6 +41,15 @@ const Footer = () => {
             />
           );
         })}
+        <Affix offsetBottom={20} className={isAffixed ? "affixed-whatsapp" : null} onChange={affixed => setIsAffixed(affixed)}>
+          <SocialIcon
+            key={SOCIAL_NETWORKS_URL[SOCIAL_NETWORKS.WHATSAPP]}
+            network={SOCIAL_NETWORKS.WHATSAPP}
+            fgColor="white"
+            url={SOCIAL_NETWORKS_URL[SOCIAL_NETWORKS.WHATSAPP]}
+            target="_blank"
+          />
+        </Affix>
       </div>
       <div className="map-location">
         <iframe src={MAP_URL} width="700" height="400" title={ALT_MAP} />
