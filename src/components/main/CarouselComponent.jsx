@@ -5,10 +5,11 @@ import thirdSlide from "../../assets/third-slide.png";
 import fourthSlide from "../../assets/fourth-slide.png";
 import fifthSlide from "../../assets/fifth-slide.png";
 import sixthSlide from "../../assets/sixth-slide.png";
+import seventhSlide from "../../assets/seventh-slide.png";
 import logo from "../../assets/davinci-icon.png";
 import "./CarouselComponent.less";
 
-const imageCaption = `<img src=${logo} />`;
+const imageCaption = `<img src=${logo} alt="Carousel image" />`;
 
 const CarouselComponent = () => {
   return (
@@ -19,9 +20,10 @@ const CarouselComponent = () => {
         { image: thirdSlide, caption: imageCaption },
         { image: fourthSlide, caption: imageCaption },
         { image: fifthSlide, caption: imageCaption },
-        { image: sixthSlide, caption: imageCaption }
+        { image: sixthSlide, caption: imageCaption },
+        { image: seventhSlide, caption: imageCaption }
       ]}
-      time={5000}
+      time={6000}
       width="100%"
       height="100%"
       automatic={true}
